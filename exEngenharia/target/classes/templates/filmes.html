@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Melhores Filmes 2023</title>
+</head>
+<body>
+<h1 style="text-align:center;">Melhores Filmes 2023</h1>
+<hr>
+
+<div style="display: flex; width: 100%;">
+    <div  th:each="filme:${filmes}" style="margin:10px">
+       <div> <img th:src="${filme.imagem}" alt="Imagem" width="250" height="340">
+        <p th:text="${filme.nome}"> </p>
+       </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
